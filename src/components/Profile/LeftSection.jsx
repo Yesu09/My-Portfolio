@@ -1,6 +1,6 @@
 export function Leftsection() {
     return (
-        <div className="order-2 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left">
+        <div className="order-2 mt-4 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left">
 
             {/* Name */}
             <h1 className="mt-4 text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">

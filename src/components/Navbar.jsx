@@ -5,16 +5,16 @@ function Navbar() {
     return (
     <>
         {/* Navbar */ }
-    < div className = "sticky top-0 left-0 flex w-full items-center justify-between border-b border-white/10 bg-sky-100 p-4 backdrop-blur-xl" >
+    < div className = "fixed z-50 top-0 left-0 flex w-full scroll-mt-20 items-center justify-between border-b border-white/10 bg-sky-100 p-4 backdrop-blur-xl" >
             <div className="text-3xl font-bold">Yesubabu</div>
 
     {/* Desktop Navbar */ }
     <ul className="hidden gap-3 text-lg sm:flex">
         <li>
-            <a href="">Profile</a>
+            <a href="#Profile">Profile</a>
         </li>
         <li>
-            <a href="">About</a>
+            <a href="#about">About</a>
         </li>
         <li>
             <a href="">Projects</a>
@@ -41,8 +41,8 @@ function Navbar() {
 
         {/* Mobile Navbar */ }
     {
-        open && (
-            <ul className="flex w-full flex-col items-center gap-3 border-b bg-sky-100 p-4 backdrop-blur-xl py-2 text-lg backdrop-blur-md">
+         open && (
+            <ul className="fixed top-16 left-0 z-40 w-full bg-sky-100 flex flex-col items-center gap-4 py-4 border-b shadow-lg sm:hidden">
                 <li>
                     <a href="">Profile</a>
                 </li>
