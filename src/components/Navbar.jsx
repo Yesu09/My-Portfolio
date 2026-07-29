@@ -20,7 +20,7 @@ function Navbar() {
             <a href="">Projects</a>
         </li>
         <li>
-            <a href="">Skills</a>
+            <a href="#skills">Skills</a>
         </li>
         <li>
             <a href="">Certifications</a>
@@ -44,16 +44,16 @@ function Navbar() {
          open && (
             <ul className="fixed top-16 left-0 z-40 w-full bg-sky-100 flex flex-col items-center gap-4 py-4 border-b shadow-lg sm:hidden">
                 <li>
-                    <a href="">Profile</a>
+                    <a href="#Profile">Profile</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
                     <a href="">Projects</a>
                 </li>
                 <li>
-                    <a href="">Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li>
                     <a href="">Certifications</a>
