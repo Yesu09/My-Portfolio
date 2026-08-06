@@ -62,15 +62,6 @@ const Story = () => {
             </p>
 
             <p>
-              Alongside development, I regularly practice
-              <span className="font-semibold text-slate-900"> Data Structures and Algorithms </span>
-              to improve my analytical thinking and problem-solving skills.
-              I enjoy learning new technologies, taking on challenging
-              projects, and continuously improving through hands-on
-              experience.
-            </p>
-
-            <p>
               My goal is to grow as a
               <span className="font-semibold text-cyan-600">
                 {" "}Software Developer

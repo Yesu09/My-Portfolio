@@ -9,7 +9,7 @@ const SkillsHeader = () => {
       transition={{ duration: 0.6 }}
       className="text-center mb-16"
     >
-      <p className="uppercase tracking-[0.35em] text-cyan-600 font-semibold">
+      <p className="uppercase tracking-[0.35em] text-black-600 font-semibold">
         My Skills
       </p>
 

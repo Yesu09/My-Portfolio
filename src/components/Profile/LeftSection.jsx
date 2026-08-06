@@ -1,9 +1,9 @@
 export function Leftsection() {
     return (
-        <div className="order-2 mt-4 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left">
+        <div className="order-2 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left">
 
             {/* Name */}
-            <h1 className="mt-4 text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
+            <h1 className="text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
                 Yesu{" "}
                 <span className="text-blue-600">
                     Babu
@@ -13,12 +13,12 @@ export function Leftsection() {
             </h1>
 
             {/* Role */}
-            <h2 className="mt-5 text-2xl font-semibold text-gray-800 sm:text-3xl">
+            <h2 className="mt-4 text-2xl font-semibold text-gray-800 sm:text-3xl">
                 Full Stack Developer
             </h2>
 
             {/* Description */}
-            <p className="mt-6 max-w-xl text-base leading-8 text-gray-600 sm:text-lg">
+            <p className="mt-4 max-w-xl text-base leading-8 text-gray-600 sm:text-lg">
                 I build responsive and scalable web applications using
                 <span className="font-semibold text-black">
                     {" "}React
@@ -38,13 +38,13 @@ export function Leftsection() {
                 real-world problems.
             </p>
 
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-green-100 px-5 py-2 text-sm font-medium text-green-700">
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-5 py-2 text-sm font-medium text-green-700">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
                 Available for Work
             </div>
 
             {/* Buttons */}
-            <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <div className="mt-5 flex flex-wrap justify-center gap-4 lg:justify-start">
 
                 <a
                     href="/YesuResume.pdf"
@@ -59,7 +59,7 @@ export function Leftsection() {
             </div>
 
             {/* Social Icons */}
-            <div className="mt-10 flex gap-5">
+            <div className="mt-5 flex gap-5">
 
                 <a
                     href="https://github.com/Yesu09"

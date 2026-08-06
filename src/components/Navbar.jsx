@@ -5,7 +5,7 @@ function Navbar() {
     return (
     <>
         {/* Navbar */ }
-    < div className = "fixed z-50 top-0 left-0 flex w-full scroll-mt-20 items-center justify-between border-b border-white/10 bg-sky-100 p-4 backdrop-blur-xl" >
+    < div className = "z-50 top-0 left-0 flex w-full items-center justify-between border-b border-white/10 bg-sky-100 p-4 backdrop-blur-xl" >
             <div className="text-3xl font-bold">Yesubabu</div>
 
     {/* Desktop Navbar */ }
@@ -17,13 +17,13 @@ function Navbar() {
             <a href="#about">About</a>
         </li>
         <li>
-            <a href="">Projects</a>
+            <a href="#projects">Projects</a>
         </li>
         <li>
             <a href="#skills">Skills</a>
         </li>
         <li>
-            <a href="">Certifications</a>
+            <a href="#certificates">Certifications</a>
         </li>
         <li>
             <a href="">Contact</a>
@@ -50,13 +50,13 @@ function Navbar() {
                     <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li>
                     <a href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="">Certifications</a>
+                    <a href="#certificates">Certifications</a>
                 </li>
                 <li>
                     <a href="">Contact</a>

@@ -4,7 +4,7 @@ export function About(){
   return (
     <section
       id="about"
-      className="bg-gray-50 py-24"
+      className="bg-gray-50 py-2"
     >
       <div className="max-w-7xl mx-auto px-6">
 
