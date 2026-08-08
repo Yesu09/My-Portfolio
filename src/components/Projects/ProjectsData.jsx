@@ -16,8 +16,8 @@ const projects = [
   },
   {
     id: 4,
-    title: "Medidesk",
-    live: "https://chatbot-gold-zeta-47.vercel.app/",
+    title: "My Portfolio",
+    live: "https://yesubabu.vercel.app//",
   },
   {
     id: 5,
