@@ -9,18 +9,11 @@ const Monitor = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
-      className="
-        flex
-        w-full
-        flex-col
-        items-center
-        px-3
-        sm:px-0
-      "
+      className="flex w-full flex-col items-center px-2 sm:px-0"
     >
-      {/* ================= Monitor + Bezel ================= */}
+      {/* ================= Monitor ================= */}
       <div className="w-full max-w-3xl">
-        {/* Monitor */}
+
         <motion.div
           whileHover={{
             rotateX: 3,
@@ -31,14 +24,22 @@ const Monitor = () => {
           className="
             relative
             w-full
-            aspect-[4/3]
+
+            /* Mobile: taller monitor */
+            aspect-[1/1]
+
+            /* Tablet/Desktop */
             sm:aspect-[16/10]
+
             rounded-t-[22px]
             sm:rounded-t-[28px]
+
             bg-[#202124]
+
             p-2
             sm:p-4
             lg:p-5
+
             shadow-2xl
           "
         >
@@ -46,8 +47,8 @@ const Monitor = () => {
           <div
             className="
               absolute
-              top-1.5
               left-1/2
+              top-1.5
               z-20
               h-1.5
               w-1.5
@@ -60,7 +61,7 @@ const Monitor = () => {
             "
           />
 
-          {/* Screen */}
+          {/* ================= Screen ================= */}
           <div
             className="
               relative
@@ -106,22 +107,25 @@ const Monitor = () => {
               "
             />
 
-            {/* Folder Grid */}
+            {/* ================= Folder Grid ================= */}
             <div
               className="
                 relative
                 z-10
                 grid
-                h-full
                 grid-cols-3
-                content-start
+
+                /* Mobile */
                 gap-x-1
-                gap-y-2
-                p-3
-                sm:grid-cols-3
+                gap-y-3
+                p-2
+
+                /* Small screens */
                 sm:gap-x-4
-                sm:gap-y-4
+                sm:gap-y-6
                 sm:p-6
+
+                /* Desktop */
                 lg:grid-cols-4
                 lg:gap-x-6
                 lg:gap-y-8
@@ -135,9 +139,6 @@ const Monitor = () => {
                     flex
                     min-w-0
                     justify-center
-                    scale-[0.72]
-                    sm:scale-[0.85]
-                    lg:scale-100
                   "
                 >
                   <Folder project={project} />
