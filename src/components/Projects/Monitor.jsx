@@ -120,7 +120,7 @@ const Monitor = () => {
                 p-3
                 sm:grid-cols-3
                 sm:gap-x-4
-                sm:gap-y-6
+                sm:gap-y-4
                 sm:p-6
                 lg:grid-cols-4
                 lg:gap-x-6
