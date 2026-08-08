@@ -23,82 +23,124 @@ const Folder = ({ project }) => {
       whileTap={{
         scale: 0.95,
       }}
-      className="flex flex-col items-center gap-2 outline-none"
+      className="
+        flex
+        w-full
+        max-w-[85px]
+        flex-col
+        items-center
+        gap-1
+        outline-none
+
+        sm:max-w-[110px]
+        sm:gap-2
+        lg:max-w-[130px]
+      "
     >
       {/* Folder */}
-
       <div className="relative">
 
         {/* Selection Background */}
-
         {selected && (
           <motion.div
             layoutId="selection"
-            className="absolute -inset-2 rounded-xl bg-blue-500/30"
+            className="
+              absolute
+              -inset-1.5
+              rounded-xl
+              bg-blue-500/30
+              sm:-inset-2
+            "
           />
         )}
 
         {/* Folder Tab */}
-
         <div
           className="
-          absolute
-          top-0
-          left-2
-          w-10
-          h-3
-          rounded-t-md
-          bg-[#F7D56B]
-          z-10
+            absolute
+            left-1
+            top-0
+            z-10
+            h-2
+            w-7
+            rounded-t-md
+            bg-[#F7D56B]
+
+            sm:left-2
+            sm:h-3
+            sm:w-10
           "
         />
 
         {/* Folder Body */}
-
         <div
           className="
-          relative
-          mt-2
-          w-20
-          h-14
-          rounded-lg
-          bg-gradient-to-b
-          from-[#FFD969]
-          to-[#E9B735]
-          shadow-xl
-          overflow-hidden
+            relative
+            mt-1.5
+            h-11
+            w-16
+            overflow-hidden
+            rounded-lg
+            bg-gradient-to-b
+            from-[#FFD969]
+            to-[#E9B735]
+            shadow-xl
+
+            sm:mt-2
+            sm:h-14
+            sm:w-20
           "
         >
           {/* Shine */}
-
           <div
             className="
-            absolute
-            top-2
-            left-2
-            w-12
-            h-2
-            rounded-full
-            bg-white/40
+              absolute
+              left-1.5
+              top-1.5
+              h-1.5
+              w-9
+              rounded-full
+              bg-white/40
+
+              sm:left-2
+              sm:top-2
+              sm:h-2
+              sm:w-12
             "
           />
 
           {/* Bottom Shadow */}
+          <div
+            className="
+              absolute
+              bottom-0
+              h-2
+              w-full
+              bg-black/10
 
-          <div className="absolute bottom-0 w-full h-3 bg-black/10" />
+              sm:h-3
+            "
+          />
         </div>
-
       </div>
 
       {/* Folder Name */}
-
       <span
         className="
-        text-white
-        text-sm
-        font-medium
-        text-center
-        drop-shadow-lg
+          block
+          w-full
+          overflow-hidden
+          px-0.5
+          text-center
+          text-[10px]
+          font-medium
+          leading-tight
+          text-white
+          drop-shadow-lg
+          break-words
+
+          sm:text-sm
+          sm:leading-tight
         "
       >
         {project.title}
