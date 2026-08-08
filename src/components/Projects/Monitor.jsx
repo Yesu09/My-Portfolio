@@ -9,119 +9,112 @@ const Monitor = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
-      className="flex flex-col items-center w-full"
+      className="flex flex-col items-center w-full px-2 sm:px-0"
     >
-      {/* ================= Monitor ================= */}
-
-      <motion.div
-        whileHover={{
-          rotateX: 3,
-          rotateY: -3,
-        }}
-        transition={{ duration: 0.3 }}
-        style={{ transformStyle: "preserve-3d" }}
-        className="
-          relative
-          w-full
-          max-w-2xl
-          aspect-[16/10]
-          bg-[#202124]
-          rounded-t-[28px]
-          shadow-2xl
-          p-3
-          sm:p-4
-          lg:p-5
-        "
-      >
-        {/* Camera */}
-
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gray-700 z-20" />
-
-        {/* Screen */}
-
-        <div
+      {/* ================= Monitor + Bezel ================= */}
+      <div className="w-full max-w-2xl">
+        {/* Monitor */}
+        <motion.div
+          whileHover={{
+            rotateX: 3,
+            rotateY: -3,
+          }}
+          transition={{ duration: 0.3 }}
+          style={{ transformStyle: "preserve-3d" }}
           className="
             relative
-            h-full
             w-full
-            rounded-2xl
-            overflow-hidden
-            bg-gradient-to-br
-            from-[#4A90E2]
-            via-[#2B5FC8]
-            to-[#143D8F]
+            aspect-[16/10]
+            bg-[#202124]
+            rounded-t-[28px]
+            shadow-2xl
+            p-3
+            sm:p-4
+            lg:p-5
           "
         >
-          {/* Wallpaper Glow */}
+          {/* Camera */}
+          <div className="absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gray-700 z-20" />
 
-          <div className="absolute -top-20 -right-16 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
-
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-cyan-300/10 blur-3xl" />
-
-          {/* Folder Grid */}
-
+          {/* Screen */}
           <div
             className="
               relative
-              z-10
-              grid
-              grid-cols-2
-              sm:grid-cols-3
-              lg:grid-cols-4
-              gap-y-8
-              gap-x-6
-              p-6
-              sm:p-8
-              lg:p-10
+              h-full
+              w-full
+              rounded-2xl
+              overflow-hidden
+              bg-gradient-to-br
+              from-[#4A90E2]
+              via-[#2B5FC8]
+              to-[#143D8F]
             "
           >
-            {projects.map((project) => (
-              <Folder
-                key={project.id}
-                project={project}
-              />
-            ))}
+            {/* Wallpaper Glow */}
+            <div className="absolute -top-20 -right-16 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
+
+            <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-cyan-300/10 blur-3xl" />
+
+            {/* Folder Grid */}
+            <div
+              className="
+                relative
+                z-10
+                grid
+                grid-cols-2
+                sm:grid-cols-3
+                lg:grid-cols-4
+                gap-y-8
+                gap-x-6
+                p-6
+                sm:p-8
+                lg:p-10
+              "
+            >
+              {projects.map((project) => (
+                <Folder
+                  key={project.id}
+                  project={project}
+                />
+              ))}
+            </div>
+
+            {/* Glass Reflection */}
+            <div
+              className="
+                absolute
+                top-0
+                right-10
+                w-24
+                h-full
+                bg-white/10
+                skew-x-[-20deg]
+                blur-sm
+              "
+            />
           </div>
+        </motion.div>
 
-          {/* Glass Reflection */}
-
-          <div
-            className="
-              absolute
-              top-0
-              right-10
-              w-24
-              h-full
-              bg-white/10
-              skew-x-[-20deg]
-              blur-sm
-            "
-          />
+        {/* ================= Bottom Bezel ================= */}
+        <div
+          className="
+            w-full
+            h-14
+            bg-gradient-to-b
+            from-[#E6E6E6]
+            to-[#BEBEBE]
+            rounded-b-3xl
+            flex
+            justify-center
+            items-center
+            shadow-lg
+          "
+        >
+          <div className="w-5 h-5 rounded-full bg-gray-400" />
         </div>
-      </motion.div>
-
-      {/* ================= Bottom Bezel ================= */}
-
-      <div
-        className="
-          w-[96%]
-          max-w-[670px]
-          h-14
-          bg-gradient-to-b
-          from-[#E6E6E6]
-          to-[#BEBEBE]
-          rounded-b-3xl
-          flex
-          justify-center
-          items-center
-          shadow-lg
-        "
-      >
-        <div className="w-5 h-5 rounded-full bg-gray-400" />
       </div>
 
       {/* ================= Stand ================= */}
-
       <div
         className="
           w-20
@@ -135,7 +128,6 @@ const Monitor = () => {
       />
 
       {/* ================= Base ================= */}
-
       <div
         className="
           w-40

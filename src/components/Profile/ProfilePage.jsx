@@ -3,23 +3,83 @@ import Middlesection from "./MiddleSection";
 import Rightsection from "./RightSection";
 
 export function Profile() {
-    return (
-        <section id="Profile" className="min-h-[calc(100vh-80px)] px-6 pb-4 lg:px-16">
-            <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
-            </div>
-            <div className="grid items-center gap-10 lg:grid-cols-3">
+  return (
+    <section
+      id="Profile"
+      className="
+        relative
+        min-h-screen
+        w-full
+        scroll-mt-24
+        overflow-hidden
+        px-4
+        pt-10
+        pb-12
+        sm:px-6
+        sm:pt-24
+        lg:px-10
+        lg:pt-10
+        lg:pb-10
+      "
+    >
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          w-full
+          max-w-7xl
+          flex-col
+          items-center
+          justify-center
+          gap-14
+          sm:gap-16
+          lg:min-h-[calc(100vh-5rem)]
+          lg:flex-row
+          lg:gap-8
+          xl:gap-12
+        "
+      >
+        {/* Left Section */}
+        <div
+          className="
+            flex
+            w-full
+            justify-center
+            lg:w-1/3
+            lg:justify-start
+          "
+        >
+          <Leftsection />
+        </div>
 
-                {/* Left Section */}
-                <Leftsection />
-                {/* Middle Section */}
-                <Middlesection />
+        {/* Middle Section */}
+        <div
+          className="
+            flex
+            w-full
+            justify-center
+            lg:w-1/3
+          "
+        >
+          <Middlesection />
+        </div>
 
-                {/* Right Section */}
-                <Rightsection />
-            </div>
-        </section>
-    )
+        {/* Right Section */}
+        <div
+          className="
+            flex
+            w-full
+            justify-center
+            lg:w-1/3
+          "
+        >
+          <Rightsection />
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Profile
+export default Profile;
