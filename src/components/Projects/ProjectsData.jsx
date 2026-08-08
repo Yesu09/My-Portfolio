@@ -1,8 +1,8 @@
 const projects = [
   {
     id: 1,
-    title: "Short URL",
-    live: "https://short-url-yesu.vercel.app",
+    title: "Amazon",
+    live: "https://yesu-amazon.vercel.app/",
   },
   {
     id: 2,
@@ -16,18 +16,18 @@ const projects = [
   },
   {
     id: 4,
-    title: "Chat App",
-    live: "https://your-chat-app.vercel.app",
+    title: "Medidesk",
+    live: "https://chatbot-gold-zeta-47.vercel.app/",
   },
   {
     id: 5,
-    title: "Food App",
-    live: "https://your-food-app.vercel.app",
+    title: "Short URL",
+    live: "https://short-url-yesu.vercel.app",
   },
   {
     id: 6,
-    title: "E-Commerce",
-    live: "https://your-ecommerce.vercel.app",
+    title: "Chat Bot",
+    live: "https://chatbot-gold-zeta-47.vercel.app/",
   },
 ];
 

@@ -3,9 +3,7 @@ import { motion } from "framer-motion";
 function LoadingScreen() {
   return (
     <motion.div
-      initial={{
-        opacity: 1,
-      }}
+      initial={{ opacity: 1 }}
       animate={{
         opacity: 0,
         pointerEvents: "none",
@@ -13,7 +11,7 @@ function LoadingScreen() {
       transition={{
         opacity: {
           duration: 0.7,
-          delay: 1.2,
+          delay: 1.8,
         },
       }}
       className="
@@ -21,6 +19,7 @@ function LoadingScreen() {
         inset-0
         z-[9999]
         flex
+        flex-col
         items-center
         justify-center
         bg-gradient-to-br
@@ -29,10 +28,11 @@ function LoadingScreen() {
         to-white
       "
     >
+      {/* Portfolio Text */}
       <motion.h1
         initial={{
           opacity: 0,
-          y: 20,
+          y: 25,
         }}
         animate={{
           opacity: 1,
@@ -40,19 +40,51 @@ function LoadingScreen() {
         }}
         transition={{
           duration: 0.7,
+          ease: "easeOut",
         }}
         className="
-          text-3xl
+          text-[clamp(1.8rem,8vw,3rem)]
           font-extrabold
           tracking-tight
-          text-gray-800
-          sm:text-5xl
         "
       >
-        Yesu's{" "}
-        <span className="text-blue-600">
+        <motion.span
+          className="text-gray-800"
+          animate={{
+            opacity: [0.5, 0.8, 0.5],
+            textShadow: [
+              "0 0 0px rgba(31,41,55,0)",
+              "0 0 15px rgba(31,41,55,0.2)",
+              "0 0 0px rgba(31,41,55,0)",
+            ],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          Yesu's{" "}
+        </motion.span>
+
+        <motion.span
+          className="text-blue-600"
+          animate={{
+            opacity: [0.5, 1, 0.5],
+            textShadow: [
+              "0 0 0px rgba(37,99,235,0)",
+              "0 0 18px rgba(37,99,235,0.35)",
+              "0 0 0px rgba(37,99,235,0)",
+            ],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
           Portfolio
-        </span>
+        </motion.span>
       </motion.h1>
     </motion.div>
   );
