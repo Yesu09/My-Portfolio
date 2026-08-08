@@ -9,10 +9,17 @@ const Monitor = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
-      className="flex flex-col items-center w-full px-2 sm:px-0"
+      className="
+        flex
+        w-full
+        flex-col
+        items-center
+        px-3
+        sm:px-0
+      "
     >
       {/* ================= Monitor + Bezel ================= */}
-      <div className="w-full max-w-2xl">
+      <div className="w-full max-w-3xl">
         {/* Monitor */}
         <motion.div
           whileHover={{
@@ -24,17 +31,34 @@ const Monitor = () => {
           className="
             relative
             w-full
-            aspect-[16/10]
+            aspect-[4/3]
+            sm:aspect-[16/10]
+            rounded-t-[22px]
+            sm:rounded-t-[28px]
             bg-[#202124]
-            rounded-t-[28px]
-            shadow-2xl
-            p-3
+            p-2
             sm:p-4
             lg:p-5
+            shadow-2xl
           "
         >
           {/* Camera */}
-          <div className="absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gray-700 z-20" />
+          <div
+            className="
+              absolute
+              top-1.5
+              left-1/2
+              z-20
+              h-1.5
+              w-1.5
+              -translate-x-1/2
+              rounded-full
+              bg-gray-700
+              sm:top-2
+              sm:h-2
+              sm:w-2
+            "
+          />
 
           {/* Screen */}
           <div
@@ -42,8 +66,9 @@ const Monitor = () => {
               relative
               h-full
               w-full
-              rounded-2xl
               overflow-hidden
+              rounded-xl
+              sm:rounded-2xl
               bg-gradient-to-br
               from-[#4A90E2]
               via-[#2B5FC8]
@@ -51,9 +76,35 @@ const Monitor = () => {
             "
           >
             {/* Wallpaper Glow */}
-            <div className="absolute -top-20 -right-16 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
+            <div
+              className="
+                absolute
+                -right-16
+                -top-16
+                h-48
+                w-48
+                rounded-full
+                bg-white/10
+                blur-3xl
+                sm:h-72
+                sm:w-72
+              "
+            />
 
-            <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-cyan-300/10 blur-3xl" />
+            <div
+              className="
+                absolute
+                bottom-0
+                left-0
+                h-56
+                w-56
+                rounded-full
+                bg-cyan-300/10
+                blur-3xl
+                sm:h-96
+                sm:w-96
+              "
+            />
 
             {/* Folder Grid */}
             <div
@@ -61,35 +112,53 @@ const Monitor = () => {
                 relative
                 z-10
                 grid
-                grid-cols-2
+                h-full
+                grid-cols-3
+                content-start
+                gap-x-1
+                gap-y-2
+                p-3
                 sm:grid-cols-3
+                sm:gap-x-4
+                sm:gap-y-6
+                sm:p-6
                 lg:grid-cols-4
-                gap-y-8
-                gap-x-6
-                p-6
-                sm:p-8
+                lg:gap-x-6
+                lg:gap-y-8
                 lg:p-10
               "
             >
               {projects.map((project) => (
-                <Folder
+                <div
                   key={project.id}
-                  project={project}
-                />
+                  className="
+                    flex
+                    min-w-0
+                    justify-center
+                    scale-[0.72]
+                    sm:scale-[0.85]
+                    lg:scale-100
+                  "
+                >
+                  <Folder project={project} />
+                </div>
               ))}
             </div>
 
             {/* Glass Reflection */}
             <div
               className="
+                pointer-events-none
                 absolute
+                right-5
                 top-0
-                right-10
-                w-24
                 h-full
-                bg-white/10
+                w-10
                 skew-x-[-20deg]
+                bg-white/10
                 blur-sm
+                sm:right-10
+                sm:w-24
               "
             />
           </div>
@@ -98,46 +167,59 @@ const Monitor = () => {
         {/* ================= Bottom Bezel ================= */}
         <div
           className="
+            flex
+            h-10
             w-full
-            h-14
+            items-center
+            justify-center
+            rounded-b-2xl
             bg-gradient-to-b
             from-[#E6E6E6]
             to-[#BEBEBE]
-            rounded-b-3xl
-            flex
-            justify-center
-            items-center
             shadow-lg
+            sm:h-14
+            sm:rounded-b-3xl
           "
         >
-          <div className="w-5 h-5 rounded-full bg-gray-400" />
+          <div
+            className="
+              h-3
+              w-3
+              rounded-full
+              bg-gray-400
+              sm:h-5
+              sm:w-5
+            "
+          />
         </div>
       </div>
 
       {/* ================= Stand ================= */}
       <div
         className="
-          w-20
-          sm:w-24
-          h-16
+          h-12
+          w-16
+          rounded-b-xl
           bg-gradient-to-b
           from-[#D9D9D9]
           to-[#A9A9A9]
-          rounded-b-xl
+          sm:h-16
+          sm:w-24
         "
       />
 
       {/* ================= Base ================= */}
       <div
         className="
-          w-40
-          sm:w-56
-          h-4
+          h-3
+          w-32
           rounded-full
           bg-gradient-to-b
           from-[#D8D8D8]
           to-[#9A9A9A]
           shadow-md
+          sm:h-4
+          sm:w-56
         "
       />
     </motion.div>
