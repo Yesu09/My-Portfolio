@@ -6,21 +6,30 @@ const Story = () => {
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          transition={{ duration: 0.5 }}
+          className="
+            text-2xl
+            md:text-2xl
+            lg:text-3xl
+            font-bold
+            text-center
+            text-slate-800
+          "
         >
-          <p className="text-cyan-600 font-semibold uppercase tracking-[0.3em]">
-            About Me
-          </p>
+          About Me
+        </motion.h2>
 
-          <div className="mt-6 flex justify-center">
-            <div className="h-1 w-24 rounded-full bg-cyan-500"></div>
-          </div>
-        </motion.div>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: 100 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="h-1 bg-blue-600 rounded-full mx-auto mt-3 mb-7"
+        />
 
         {/* Content Card */}
         <motion.div

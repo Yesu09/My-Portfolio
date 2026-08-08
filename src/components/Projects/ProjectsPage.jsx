@@ -72,36 +72,31 @@ const Projects = () => {
         {/* Heading */}
 
         <motion.h2
-          initial={{ opacity: 0, y: -25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="
-          text-2xl
-          md:text-3xl
-          lg:text-4xl
-          font-bold
-          text-[#12337A]
-          text-center
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="
+            text-2xl
+            md:text-2xl
+            lg:text-3xl
+            font-bold
+            text-center
+            text-slate-800
           "
-        >
-          Projects
-        </motion.h2>
+      >
+        My Projects
+      </motion.h2>
 
         {/* Blue Brush Line */}
 
         <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: 140 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="
-          h-2
-          rounded-full
-          bg-blue-600
-          mt-3
-          "
-        />
+        initial={{ width: 0 }}
+        whileInView={{ width: 100 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="h-1 bg-blue-600 rounded-full mx-auto my-3"
+      />
 
         {/* Subtitle */}
 

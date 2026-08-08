@@ -36,15 +36,15 @@ const Certificates = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="
-            text-3xl
-            md:text-4xl
-            lg:text-5xl
+            text-2xl
+            md:text-2xl
+            lg:text-3xl
             font-bold
             text-center
             text-slate-800
           "
         >
-          Certificates
+          My Certifications
         </motion.h2>
 
         {/* Underline */}

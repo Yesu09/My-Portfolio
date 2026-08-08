@@ -26,7 +26,7 @@ function Navbar() {
             <a href="#certificates">Certifications</a>
         </li>
         <li>
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
         </li>
     </ul>
 
@@ -59,7 +59,7 @@ function Navbar() {
                     <a href="#certificates">Certifications</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         )
