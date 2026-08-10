@@ -9,7 +9,14 @@ const Monitor = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
-      className="flex w-full flex-col items-center px-2 sm:px-0"
+      className="
+        flex
+        w-full
+        flex-col
+        items-center
+        px-2
+        sm:px-0
+      "
     >
       {/* ================= Monitor ================= */}
       <motion.div
@@ -22,14 +29,20 @@ const Monitor = () => {
         className="
           relative
           w-full
+          max-w-[700px]
           aspect-[4/3]
+
           sm:aspect-[16/10]
+
           rounded-t-[22px]
           sm:rounded-t-[28px]
+
           bg-[#202124]
+
           p-2
           sm:p-4
           lg:p-5
+
           shadow-2xl
         "
       >
@@ -45,6 +58,7 @@ const Monitor = () => {
             -translate-x-1/2
             rounded-full
             bg-gray-700
+
             sm:top-2
             sm:h-2
             sm:w-2
@@ -113,9 +127,9 @@ const Monitor = () => {
               sm:p-6
 
               lg:grid-cols-4
-              lg:gap-x-6
-              lg:gap-y-8
-              lg:p-10
+              lg:gap-x-5
+              lg:gap-y-6
+              lg:p-7
             "
           >
             {projects.map((project) => (
@@ -153,6 +167,7 @@ const Monitor = () => {
           flex
           h-10
           w-full
+          max-w-[700px]
           items-center
           justify-center
           rounded-b-2xl
@@ -160,6 +175,7 @@ const Monitor = () => {
           from-[#E6E6E6]
           to-[#BEBEBE]
           shadow-lg
+
           sm:h-14
           sm:rounded-b-3xl
         "
@@ -170,6 +186,7 @@ const Monitor = () => {
             w-3
             rounded-full
             bg-gray-400
+
             sm:h-5
             sm:w-5
           "
@@ -185,6 +202,7 @@ const Monitor = () => {
           bg-gradient-to-b
           from-[#D9D9D9]
           to-[#A9A9A9]
+
           sm:h-16
           sm:w-24
         "
@@ -200,6 +218,7 @@ const Monitor = () => {
           from-[#D8D8D8]
           to-[#9A9A9A]
           shadow-md
+
           sm:h-4
           sm:w-56
         "
