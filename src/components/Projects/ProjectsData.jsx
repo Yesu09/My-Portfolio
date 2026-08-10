@@ -1,8 +1,8 @@
 const projects = [
   {
     id: 1,
-    title: "Amazon",
-    live: "https://yesu-amazon.vercel.app/",
+    title: "QuickBuy",
+    live: "https://yesu-quick-buy.vercel.app/",
   },
   {
     id: 2,
