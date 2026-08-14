@@ -9,7 +9,7 @@ export function Rightsection(){
               {/* Circle */}
               <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white shadow-2xl">
                 <img
-                  src="/ProfilePicture.png"
+                  src="/ProfilePicture.jpeg"
                   alt="Yesu Babu"
                   className="h-full w-full object-cover object-top"
                 />
