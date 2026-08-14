@@ -81,7 +81,7 @@ export function Leftsection() {
       {/* Resume */}
       <div className="mt-6">
         <a
-          href="/YesuResume.pdf"
+          href="/YesubabuYadala_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="
